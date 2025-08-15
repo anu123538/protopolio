@@ -1,6 +1,6 @@
 .hero {
   display: flex;
-  align-items: center;  /* vertically center if you add text later */
+  align-items: center;  /* vertically center */
   flex-direction: column;
   gap: 35px;
 }
@@ -8,30 +8,59 @@
 .hero img {
   width: 200px;
   height: auto;
-  border-radius: 10px;
-  margin-top:50px ;
-   object-fit: cover;        /* Crop to fill the circle nicely */
-  border-radius: 50%;       /* This makes it round */
+  border-radius: 50%;       /* makes it round */
+  margin-top: 50px;
+  object-fit: cover;        /* crop nicely */
   border: 3px solid white;
+  animation: float 3s ease-in-out infinite; /* floating animation */
 }
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
 .hero h1 {
   font-size: 70px;
   width: 60%;
   font-weight: 600;
   text-align: center;
 }
+
 .hero h1 span {
   background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
-  background-clip:text;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Typing Animation for Job Title */
+.typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #DF8908;
+  animation: typing 3s steps(30, end), blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
 .hero p {
   font-size: 24px;
   width: 50%;
   text-align: center;
   line-height: 40px;
 }
+
 .hero-actiion {
   display: flex;
   gap: 25px;
@@ -40,22 +69,29 @@
   font-weight: 500;
   margin-bottom: 50px;
 }
-.hero-connect{
+
+.hero-connect {
   padding: 25px 45px;
   border-radius: 50px;
   background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 100%);
   cursor: pointer;
-
+  transition: all 0.3s ease;
 }
+
 .hero-resume {
   padding: 25px 75px;
   border-radius: 50px;
   border: 2px solid #FFF;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+
 .hero-connect:hover {
   border: 2px solid white;
+  transform: scale(1.05);
 }
+
 .hero-resume:hover {
   border-color: #B415FF;
+  transform: scale(1.05);
 }

@@ -1,24 +1,41 @@
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px 170px;
 }
-.nav-menu{
-    display:flex ;
+
+/* Navbar menu */
+.nav-menu {
+    display: flex;
     align-items: center;
     list-style: none;
     gap: 60px;
-    font-size:20px ;
+    font-size: 20px;
+    font-weight: 500;
 }
-.nav-connect{
+
+/* Navbar links */
+.nav-menu a {
+    color: #fff;           /* White color for links */
+    text-decoration: none; /* Remove underline */
+    transition: 0.3s;      /* Smooth hover effect */
+}
+
+.nav-menu a:hover {
+    color: #DA7C25;        /* Optional hover color */
+}
+
+/* Connect button */
+.nav-connect {
     padding: 20px 40px;
     border-radius: 50px;
-    background:linear-gradient(276deg, #DA7C25 0.36%, #B923E1 100%);
+    background: linear-gradient(276deg, #DA7C25 0.36%, #B923E1 100%);
     font-size: 22px;
     cursor: pointer;
     transition: 0.5s;
 }
-.nav-connect:hover{
+
+.nav-connect:hover {
     transform: scale(1.05);
 }
