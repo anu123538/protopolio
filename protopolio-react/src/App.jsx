@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components//Navbar/Hero/Hero';
 import About from './Components/About/About';
 import Certificate from './Components/Certificate/Certificate';
+import Skills from './Components/Skills/Skills';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About Me />} />
         <Route path="/certificate" element={<Certificate />} />
+        <Route path="/skills" element={<Skills />} />
        
       </Routes>
     </Router>
