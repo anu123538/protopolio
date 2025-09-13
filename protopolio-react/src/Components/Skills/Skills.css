@@ -1,3 +1,15 @@
+/* Animation for headings */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Container */
 .Skills {
   background-color: #0e0e0e;
@@ -16,7 +28,11 @@
   margin-bottom: 50px;
   position: relative;
   z-index: 1;
+
+  /* Animation */
+  animation: fadeInUp 1s ease-out;
 }
+
 .skills-title img {
   position: absolute;
   bottom: 0;
