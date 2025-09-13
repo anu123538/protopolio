@@ -32,7 +32,7 @@ const Skills = () => {
           <h2>🛠 Technical Skills</h2>
           <ul>
             <li>Manual Testing</li>
-            <li>Automated Testing (Selenium / Cypress)</li>
+            <li>Automated Testing (Selenium /Junit/Jmeter) </li>
             <li>Test Case Design & Execution</li>
             <li>Bug Tracking (JIRA, Bugzilla)</li>
             <li>SQL / Database Testing</li>
