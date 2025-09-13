@@ -1,0 +1,91 @@
+.certificate-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.certificate-section h2 {
+  font-size:60px;
+  margin-bottom: 1.5rem;
+  color: #eee;
+  text-align: center;
+  position: relative;
+  display: inline-block; /* for underline width matching text */
+  padding-bottom: 8px;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Orange underline below heading */
+.certificate-section h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;       /* length of the underline */
+  height: 4px;       /* thickness of the underline */
+  background-color: orange;  /* underline color */
+  border-radius: 2px;
+  text-align: center;
+}
+
+/* Keyframes for fade-in + slide-up */
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.certificate-card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.certificate-card:hover {
+  transform: scale(1.05);
+}
+
+.certificate-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.certificate-info {
+  padding: 1rem;
+  color: #ccc;
+}
+
+.certificate-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: #00ff99; /* bright green text */
+}
+
+.certificate-info .issuer {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+  color: #888;
+}
+
+.certificate-info .year {
+  font-size: 0.8rem;
+  color: #555;
+}

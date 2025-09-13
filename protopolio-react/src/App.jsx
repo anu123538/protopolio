@@ -7,6 +7,7 @@ import Hero from './Components//Navbar/Hero/Hero';
 import About from './Components/About/About';
 import Certificate from './Components/Certificate/Certificate';
 import Skills from './Components/Skills/Skills';
+import Project from './Components/Project/Project';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<About Me />} />
         <Route path="/certificate" element={<Certificate />} />
         <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Project />} />
        
       </Routes>
     </Router>

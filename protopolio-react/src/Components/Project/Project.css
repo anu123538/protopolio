@@ -1,0 +1,104 @@
+/* Project.css */
+
+/* Section container */
+.project-container {
+  padding: 2rem;
+  background-color: #0f1624;
+  color: #e0e6f1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Updated heading style to match "My Certifications" */
+.animated-heading {
+  font-size: 60px;
+  font-weight: bold;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  margin: 2rem auto;
+  padding-bottom: 8px;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Orange underline */
+.animated-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: orange;
+  border-radius: 2px;
+}
+
+/* Slide up fade-in animation */
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Grid layout for cards */
+.project-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Project card container */
+.project-card {
+  background-color: #1c2948;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Link wraps image */
+.project-card a {
+  display: block;
+}
+
+/* Project image */
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card img:hover {
+  transform: scale(1.05);
+}
+
+/* Project text content */
+.project-content {
+  padding: 1rem;
+}
+
+.project-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.project-content p {
+  font-size: 0.95rem;
+  color: #a0aec0;
+  line-height: 1.4;
+}
