@@ -8,7 +8,7 @@ import About from './Components/About/About';
 import Certificate from './Components/Certificate/Certificate';
 import Skills from './Components/Skills/Skills';
 import Project from './Components/Project/Project';
-
+import Contact from './Components/Contact/Contact';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <Route path="/certificate" element={<Certificate />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Project />} />
+        <Route path="/contact" element={<Contact />} />
        
       </Routes>
     </Router>
