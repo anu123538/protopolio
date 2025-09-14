@@ -30,7 +30,7 @@
 }
 
 .hero h1 span {
-  background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+  background: linear-gradient(270deg, #00ff99 10%, #00ff99 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -41,7 +41,7 @@
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid #DF8908;
+  border-right: 3px solid #00ff99;
   animation: typing 3s steps(30, end), blink 0.7s step-end infinite;
 }
 
@@ -61,7 +61,8 @@
   line-height: 40px;
 }
 
-.hero-actiion {
+/* ✅ Fixed class name */
+.hero-action {
   display: flex;
   gap: 25px;
   align-items: center;
@@ -70,22 +71,28 @@
   margin-bottom: 50px;
 }
 
+/* Connect Button */
 .hero-connect {
   padding: 20px 40px;
   border-radius: 40px;
-  background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 100%);
+  background: linear-gradient(264deg, #00ff99 -5.09%, #00ff99 100%);
   cursor: pointer;
   transition: all 0.3s ease;
+  color:black;
 }
 
+/* Resume Button */
 .hero-resume {
   padding: 20px 40px;
   border-radius: 40px;
   border: 2px solid #FFF;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
 }
 
+/* Hover Effects */
 .hero-connect:hover {
   border: 2px solid white;
   transform: scale(1.05);
