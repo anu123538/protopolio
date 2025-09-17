@@ -1,28 +1,46 @@
 import React from 'react'
 import './Certificate.css';
+import uiCertificate from '../../assets/ui.jpg';
+import moCertificate from '../../assets/mo.png';
+
 
 const certificates = [
   {
     id: 1,
+    title: "HACKBLAST COMPETITION",
+    issuer: "IEEE",
+    year: "2024",
+    image: "" ,  // replace with your image paths
+  },
+  {
+  id: 2,
+    title: "Machine Learning &FPGAs",
+    issuer: "Great Learning",
+    year: "2024",
+    image: uiCertificate,
+},
+{
+  id: 3,
+    title: "Smart School Selector",
+    issuer: "CINEC INTERNATIONAL RESEARCH SYMPOSIUM",
+    year: "2024",
+    image: "",
+},
+  {
+    id: 4,
     title: "Python for Beginners",
     issuer: "University of Moratuwa",
     year: "2023",
-    image: "",  // replace with your image paths
+    image: moCertificate,
   },
   {
-    id: 2,
-    title: "Web Design for Beginners",
-    issuer: "University of Moratuwa",
-    year: "2023",
-    image: "",
-  },
-  {
-    id: 3,
-    title: "Front-End Web Development using...",
-    issuer: "DevTown",
+    id: 5,
+    title: "UI/UX  For Beginners",
+    issuer: "Great Learning",
     year: "2024",
-    image: "",
+    image: uiCertificate,
   },
+  
   // Add more certificates here
 ];
 
