@@ -34,10 +34,10 @@ const projects = [
     github: "https://github.com/eventryaprojectPM",
   },
   {
-    title: "Student Showcase",
-    description: "Platform to showcase student projects and portfolios.",
-    img: "https://via.placeholder.com/350x150?text=Student+Showcase",
-    github: "https://github.com/your-username/student-showcase",
+    title: "Hotel Management System",
+    description: "Java-based hotel management application.",
+    img: "",
+    github: "https://github.com/anu123538/hotel_management_system-in-java",
   },
   {
     title: "E-commerce Website",
