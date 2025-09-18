@@ -5,6 +5,7 @@ import Lproject from '../../assets/L.jpg';
 import dproject from '../../assets/d.jpg';
 import hproject from '../../assets/h.png';
 import aproject from '../../assets/a.jpg';
+import cproject from '../../assets/c.jpeg';
 
 const projects = [
   {
@@ -53,7 +54,7 @@ const projects = [
   {
     title: "class attendence management system",
     description: "class attendence management system using php", 
-    img: "",
+    img: cproject,
     github: "https://github.com/anu123538/class-attendance-management",
   },
   {
