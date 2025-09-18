@@ -1,12 +1,17 @@
 import React from "react";
 import "./Project.css";
+import sproject from '../../assets/s.png';
+import Lproject from '../../assets/L.jpg';
+import dproject from '../../assets/d.jpg';
+import hproject from '../../assets/h.png';
+import aproject from '../../assets/a.jpg';
 
 const projects = [
   {
     title: "Automation testing linkdln post upload using java selenium",
     description:
       "Automation script using Selenium for Linkdln post upload.",
-    img: "", // Empty image — fallback will be used
+    img: Lproject, // Empty image — fallback will be used
     github: "https://github.com/anu123538/java-selenium-automation-tests",
   },
   {
@@ -18,13 +23,13 @@ const projects = [
   {
     title: " Automation Testing Demoblaze with JMeter",
     description: "Performance testing for Demoblaze website using JMeter.",
-    img: "",
+    img:dproject,
     github: "https://github.com/anu123538/Demoblaze-JMeter-Test-Plan",
   },
   {
     title: "Smart AI Chatbot using openrouter API",
     description: "AI Chatbot using Python and Flask Using OpenAI API.",
-    img: "",
+    img: sproject,
     github: "https://github.com/anu123538/smart_AI_chatbot",
   },
   {
@@ -36,7 +41,7 @@ const projects = [
   {
     title: "Hotel Management System",
     description: "Java-based hotel management application.",
-    img: "",
+    img: hproject,
     github: "https://github.com/anu123538/hotel_management_system-in-java",
   },
   {
@@ -46,11 +51,24 @@ const projects = [
     github: "https://github.com/anu123538/ecommerce-website",
   },
   {
+    title: "class attendence management system",
+    description: "class attendence management system using php", 
+    img: "",
+    github: "https://github.com/anu123538/class-attendance-management",
+  },
+  {
     title: "Food Delivery website",
     description: "Food delivery platform with real-time tracking.",
     img: "",
     github: "https://github.com/anu123538/projects",
   },
+  {
+    title: "Arogya Medical Website",
+    description: "Medical services and appointment booking platform using python",
+    img: aproject,
+    github: "https://github.com/anu123538/Arogya-medical-center",
+  },
+
 
 ];
 
