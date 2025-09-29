@@ -9,6 +9,7 @@ import cproject from '../../assets/c.jpeg';
 import amproject from '../../assets/am.png';
 import jproject from '../../assets/j.png';
 import evproject from '../../assets/ev.png';
+import fdproject from '../../assets/fd.png';
 
 const projects = [
   {
@@ -69,7 +70,7 @@ const projects = [
   {
     title: "Food Delivery website",
     description: "Food delivery platform with real-time tracking.",
-    img: "",
+    img: fdproject,
     github: "https://github.com/anu123538/projects",
   },
   {
