@@ -2,10 +2,13 @@ import React from "react";
 import "./Project.css";
 import sproject from '../../assets/s.png';
 import Lproject from '../../assets/L.jpg';
-import dproject from '../../assets/d.jpg';
+import dproject from '../../assets/d.jpeg';
 import hproject from '../../assets/h.png';
 import aproject from '../../assets/a.jpg';
 import cproject from '../../assets/c.jpeg';
+import amproject from '../../assets/am.png';
+import jproject from '../../assets/j.png';
+import evproject from '../../assets/ev.png';
 
 const projects = [
   {
@@ -16,16 +19,16 @@ const projects = [
     github: "https://github.com/anu123538/java-selenium-automation-tests",
   },
   {
-    title: "Selenium Automation for Instagram",
-    description: "Automation script using Selenium for Instagram post upload.",
-    img: "",
-    github: "https://github.com/your-username/selenium-instagram-automation",
+    title: "Automation testing hotelreservation system using selenium and JMETER",
+    description: "Automation script using Selenium for hotel  reservation system.",
+    img: amproject,
+    github: "https://github.com/anu123538/Testing-Hotel-Reservation-System-using-Selenium-and-Jmeter",
   },
   {
-    title: " Automation Testing Demoblaze with JMeter",
-    description: "Performance testing for Demoblaze website using JMeter.",
+    title: " Automation Testing education separtment website using JMETER",
+    description: "Performance testing for eduaction department website using JMeter.",
     img:dproject,
-    github: "https://github.com/anu123538/Demoblaze-JMeter-Test-Plan",
+    github: "https://github.com/anu123538/Education-Website-TestPlan-JMeter",
   },
   {
     title: "Smart AI Chatbot using openrouter API",
@@ -35,8 +38,8 @@ const projects = [
   },
   {
     title: "Eventrya website",
-    description: "Online flower shop with fresh delivery.",
-    img: "",
+    description: "Event management platform with user registration , event listings ,ticket booking and seat booking.",
+    img: evproject,
     github: "https://github.com/eventryaprojectPM",
   },
   {
@@ -50,6 +53,12 @@ const projects = [
     description: "Full-featured e-commerce platform using React ",
     img: "",
     github: "https://github.com/anu123538/ecommerce-website",
+  },
+     {
+    title: "Testing Student Management System using JUNIT",
+    description: "Unit testing for student management system using JUNIT.",
+    img:jproject ,
+    github: "https://github.com/anu123538/Testing-Student-Management-System-using-JUNIT",
   },
   {
     title: "class attendence management system",
