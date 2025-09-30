@@ -5,7 +5,7 @@ import moCertificate from '../../assets/mo.png';
 import tcertificate from '../../assets/t.png';
 import cicertificate from '../../assets/ci.jpeg';
 import hkcertificate from '../../assets/hk.jpeg';
-
+import mlCertificate from '../../assets/ml.png';
 
 const certificates = [
   {
@@ -18,9 +18,9 @@ const certificates = [
   {
   id: 2,
     title: "Machine Learning &FPGAs",
-    issuer: "Great Learning",
-    year: "2024",
-    image: uiCertificate,
+    issuer: "IEEE",
+    year: "2025",
+    image: mlCertificate,
 },
 {
   id: 3,
