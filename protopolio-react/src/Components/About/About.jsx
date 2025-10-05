@@ -26,11 +26,15 @@ const About = () => {
   <div className="about-skill"><p>Java</p><hr style={{width:"80%"}} /></div>
   <div className="about-skill"><p>Python</p><hr style={{width:"70%"}} /></div>
   <div className="about-skill"><p>Postman</p><hr style={{width:"40%"}} /></div>
-  <div className="about-skill"><p>Automation testing</p><hr style={{width:"60%"}} /></div>
-  <div className="about-skill"><p>Java Selenium</p><hr style={{width:"70%"}} /></div>
+  <div className="about-skill"><p>JMeter</p><hr style={{width:"80%"}} /></div>
+  <div className="about-skill"><p>Java Selenium</p><hr style={{width:"80%"}} /></div>
   <div className="about-skill"><p>Test Case Writing</p><hr style={{width:"80%"}} /></div>
   <div className="about-skill"><p>Git & GitHub</p><hr style={{width:"80%"}} /></div>
   <div className="about-skill"><p>Sql</p><hr style={{width:"80%"}} /></div>
+  <div className="about-skill"><p>Figma</p><hr style={{width:"70%"}} /></div>
+  <div className="about-skill"><p>Jest</p><hr style={{width:"70%"}} /></div>
+  <div className="about-skill"><p>Test Rail</p><hr style={{width:"80%"}} /></div>
+  <div className="about-skill"><p>JUnit</p><hr style={{width:"80%"}} /></div>
 </div>
 
       </div>

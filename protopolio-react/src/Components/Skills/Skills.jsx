@@ -32,7 +32,7 @@ const Skills = () => {
           <h2>🛠 Technical Skills</h2>
           <ul>
             <li>Manual Testing</li>
-            <li>Automated Testing (Selenium /Junit/Jmeter) </li>
+            <li>Automated Testing (Selenium /Junit/Jmeter/Jest) </li>
             <li>Test Case Design & Execution</li>
             <li>Bug Tracking (JIRA, Bugzilla)</li>
             <li>White and Black box testing</li>
@@ -42,6 +42,7 @@ const Skills = () => {
             <li>API Testing (Postman)</li>
             <li>Version Control (Git)</li>
             <li>Agile & Scrum Methodologies</li>
+            <li>Figma</li>
           </ul>
         </div>
       </div>
