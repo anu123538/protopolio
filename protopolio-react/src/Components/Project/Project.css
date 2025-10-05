@@ -1,30 +1,30 @@
-/* Project.css */
+/* Project.css - mobile-first responsive */
 
 /* Section container */
 .project-container {
-  padding: 2rem;
+  padding: 1.5rem 1rem;
   background-color: #0f1624;
   color: #e0e6f1;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
   text-align: center;
+  box-sizing: border-box;
 }
 
-/* Updated heading style to match "My Certifications" */
+/* Animated heading (responsive) */
 .animated-heading {
-  font-size: 60px;
-  font-weight: bold;
+  font-size: 32px;          /* mobile size */
+  font-weight: 700;
   color: #00ff99;
   position: relative;
   display: inline-block;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   padding-bottom: 8px;
 
-  /* Animation */
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideUp 1s ease forwards;
-  animation-delay: 0.3s;
+  transform: translateY(12px);
+  animation: fadeSlideUp 0.9s ease forwards;
+  animation-delay: 0.2s;
 }
 
 /* Orange underline */
@@ -34,7 +34,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
+  width: 48px;
   height: 4px;
   background-color: orange;
   border-radius: 2px;
@@ -51,8 +51,10 @@
 /* Grid layout for cards */
 .project-grid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem; /* smaller gap on mobile */
+  grid-template-columns: 1fr; /* single column on small screens */
+  margin-top: 1.25rem;
+  align-items: stretch;
 }
 
 /* Project card container */
@@ -60,45 +62,163 @@
   background-color: #1c2948;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  transform: translateY(-8px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.65);
 }
 
 /* Link wraps image */
 .project-card a {
   display: block;
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Project image */
+/* Project image - responsive height */
 .project-card img {
   width: 100%;
-  height: 180px;
+  height: 160px; /* mobile-friendly */
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.28s ease;
+  display: block;
 }
 
 .project-card img:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 /* Project text content */
 .project-content {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1;
 }
 
 .project-content h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
+  margin: 0;
+  font-size: 1.05rem;
   color: #ffffff;
 }
 
 .project-content p {
+  margin: 0;
   font-size: 0.95rem;
   color: #a0aec0;
-  line-height: 1.4;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+/* Optional footer inside card for buttons/links */
+.project-footer {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button style (example) */
+.project-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(0, 255, 153, 0.08);
+  color: #00ff99;
+  border: 1px solid rgba(0, 255, 153, 0.12);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: transform .18s ease, background .18s ease;
+}
+
+.project-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* ---------- Breakpoints ---------- */
+
+/* Small tablets and up */
+@media (min-width: 640px) {
+  .project-container {
+    padding: 2rem 2rem;
+  }
+
+  .animated-heading {
+    font-size: 40px;
+  }
+
+  .project-grid {
+    gap: 1.25rem;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+
+  .project-card img {
+    height: 180px;
+  }
+}
+
+/* Medium screens (desktop) */
+@media (min-width: 1024px) {
+  .project-container {
+    padding: 2.5rem 3.5rem;
+  }
+
+  .animated-heading {
+    font-size: 56px;
+  }
+
+  .animated-heading::after {
+    width: 60px;
+  }
+
+  .project-grid {
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+
+  .project-card img {
+    height: 200px;
+  }
+
+  .project-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .project-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Large screens (wide desktop) */
+@media (min-width: 1280px) {
+  .project-container {
+    padding: 3rem 6rem;
+  }
+
+  .animated-heading {
+    font-size: 60px;
+  }
+
+  .project-card img {
+    height: 220px;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animated-heading,
+  .project-card,
+  .project-card img,
+  .project-btn {
+    animation: none !important;
+    transition: none !important;
+  }
 }

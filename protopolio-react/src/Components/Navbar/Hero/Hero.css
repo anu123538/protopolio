@@ -1,34 +1,42 @@
+/* mobile-first baseline */
 .hero {
   display: flex;
-  align-items: center;  /* vertically center */
+  align-items: center;
   flex-direction: column;
-  gap: 35px;
+  gap: 20px;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
+/* profile image */
 .hero img {
-  width: 200px;
-  height: auto;
-  border-radius: 50%;       /* makes it round */
-  margin-top: 50px;
-  object-fit: cover;        /* crop nicely */
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
   border: 3px solid white;
-  animation: float 3s ease-in-out infinite; /* floating animation */
+  animation: float 3s ease-in-out infinite;
+  margin-top: 30px;
 }
 
 /* Floating animation */
 @keyframes float {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-15px); }
+  50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 }
 
+/* headline */
 .hero h1 {
-  font-size: 60px;
-  width: 60%;
+  font-size: 28px;
+  width: 100%;
   font-weight: 600;
   text-align: center;
+  margin: 0;
+  line-height: 1.05;
 }
 
+/* gradient text */
 .hero h1 span {
   background: linear-gradient(270deg, #00ff99 10%, #00ff99 100%);
   background-clip: text;
@@ -36,69 +44,163 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Typing Animation for Job Title */
+/* typing animation container */
 .typing-animation {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid #00ff99;
   animation: typing 3s steps(30, end), blink 0.7s step-end infinite;
+  vertical-align: middle;
 }
 
+/* typing keyframes based on container width */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from { width: 0; }
+  to   { width: 100%; }
 }
-
 @keyframes blink {
-  50% { border-color: transparent }
+  50% { border-color: transparent; }
 }
 
+/* description paragraph */
 .hero p {
-  font-size: 24px;
-  width: 50%;
+  font-size: 16px;
+  width: 100%;
   text-align: center;
-  line-height: 40px;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 720px;
 }
 
-/* ✅ Fixed class name */
+/* action buttons row */
 .hero-action {
   display: flex;
-  gap: 25px;
+  gap: 16px;
   align-items: center;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 500;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Connect Button */
 .hero-connect {
-  padding: 20px 40px;
-  border-radius: 40px;
+  padding: 12px 22px;
+  border-radius: 30px;
   background: linear-gradient(264deg, #00ff99 -5.09%, #00ff99 100%);
   cursor: pointer;
-  transition: all 0.3s ease;
-  color:black;
+  transition: transform .25s ease, border-color .25s ease;
+  color: black;
+  border: none;
 }
 
 /* Resume Button */
 .hero-resume {
-  padding: 20px 40px;
-  border-radius: 40px;
+  padding: 12px 22px;
+  border-radius: 30px;
   border: 2px solid #FFF;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform .25s ease, border-color .25s ease;
   text-decoration: none;
   color: white;
+  background: transparent;
 }
 
 /* Hover Effects */
 .hero-connect:hover {
   border: 2px solid white;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .hero-resume:hover {
   border-color: #B415FF;
-  transform: scale(1.05);
+  transform: scale(1.03);
+}
+
+/* Medium screens (tablet) */
+@media (min-width: 640px) {
+  .hero {
+    gap: 28px;
+    padding: 60px 32px;
+  }
+
+  .hero img {
+    width: 180px;
+    height: 180px;
+    margin-top: 40px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    width: 80%;
+  }
+
+  .hero p {
+    font-size: 18px;
+    width: 80%;
+    line-height: 1.6;
+  }
+
+  .hero-action {
+    gap: 20px;
+    font-size: 18px;
+  }
+
+  .hero-connect, .hero-resume {
+    padding: 14px 28px;
+    border-radius: 36px;
+  }
+}
+
+/* Large screens (desktop) */
+@media (min-width: 1024px) {
+  .hero {
+    gap: 35px;
+    padding: 80px 60px;
+    flex-direction: column;
+  }
+
+  .hero img {
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+  }
+
+  .hero h1 {
+    font-size: 60px;
+    width: 60%;
+    text-align: center;
+  }
+
+  .typing-animation {
+    /* When the container is large let typing reach full width */
+    max-width: 100%;
+  }
+
+  .hero p {
+    font-size: 24px;
+    width: 50%;
+    line-height: 40px;
+  }
+
+  .hero-action {
+    gap: 25px;
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+
+  .hero-connect, .hero-resume {
+    padding: 20px 40px;
+    border-radius: 40px;
+  }
+}
+
+/* Optional: reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero img, .typing-animation {
+    animation: none;
+  }
 }

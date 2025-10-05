@@ -1,41 +1,43 @@
+/* Certificate.css - mobile-first responsive */
+
+/* Section container */
 .certificate-section {
-  padding: 2rem;
+  padding: 1.25rem;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  box-sizing: border-box;
 }
 
+/* Heading (responsive & animated) */
 .certificate-section h2 {
-  font-size:60px;
-  margin-bottom: 1.5rem;
+  font-size: 28px; /* mobile */
+  margin-bottom: 1rem;
   color: #00ff99;
-  text-align: center;
   position: relative;
-  display: inline-block; /* for underline width matching text */
+  display: inline-block;
   padding-bottom: 8px;
 
-  /* Animation */
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideUp 1s ease forwards;
-  animation-delay: 0.3s;
+  transform: translateY(10px);
+  animation: fadeSlideUp 0.85s ease forwards;
+  animation-delay: 0.15s;
 }
 
-/* Orange underline below heading */
+/* Orange underline */
 .certificate-section h2::after {
   content: "";
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: 60px;       /* length of the underline */
-  height: 4px;       /* thickness of the underline */
-  background-color: orange;  /* underline color */
+  width: 44px;
+  height: 4px;
+  background-color: orange;
   border-radius: 2px;
-  text-align: center;
 }
 
-/* Keyframes for fade-in + slide-up */
+/* Animation keyframes */
 @keyframes fadeSlideUp {
   to {
     opacity: 1;
@@ -43,49 +45,177 @@
   }
 }
 
+/* Grid */
 .certificate-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
+/* Card */
 .certificate-card {
   background-color: #1e1e1e;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  transition: transform 0.26s ease, box-shadow 0.26s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  min-height: 220px;
 }
 
-.certificate-card:hover {
-  transform: scale(1.05);
+/* Hover / focus */
+.certificate-card:hover,
+.certificate-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.65);
+  outline: none;
 }
 
+/* Make the card keyboard-focusable (if the root element is a link/button) */
+.certificate-card a,
+.certificate-card button {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Image */
 .certificate-img {
   width: 100%;
-  height: 160px;
+  height: 140px;
   object-fit: cover;
+  display: block;
+  transition: transform 0.26s ease;
 }
 
+.certificate-card:hover .certificate-img {
+  transform: scale(1.03);
+}
+
+/* Info */
 .certificate-info {
-  padding: 1rem;
+  padding: 0.9rem;
   color: #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1 0 auto;
 }
 
 .certificate-info h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.4rem;
-  color: #00ff99; /* bright green text */
+  font-size: 1.05rem;
+  margin: 0;
+  color: #00ff99;
 }
 
 .certificate-info .issuer {
-  font-size: 0.9rem;
-  margin-bottom: 0.2rem;
-  color: #888;
+  font-size: 0.92rem;
+  margin: 0;
+  color: #bdbdbd;
 }
 
 .certificate-info .year {
-  font-size: 0.8rem;
-  color: #555;
+  font-size: 0.82rem;
+  color: #7a7a7a;
+  margin-top: auto;
+}
+
+/* Optional small badge row / action row (example) */
+.certificate-badges {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Badge example */
+.cert-badge {
+  font-size: 0.75rem;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: rgba(0,255,153,0.06);
+  color: #00ff99;
+  border: 1px solid rgba(0,255,153,0.08);
+}
+
+/* ---------- Breakpoints ---------- */
+
+/* Small tablets and up */
+@media (min-width: 640px) {
+  .certificate-section {
+    padding: 1.5rem;
+  }
+
+  .certificate-section h2 {
+    font-size: 36px;
+  }
+
+  .certificate-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .certificate-img {
+    height: 160px;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  .certificate-section {
+    padding: 2rem;
+  }
+
+  .certificate-section h2 {
+    font-size: 60px;
+  }
+
+  .certificate-section h2::after {
+    width: 60px;
+  }
+
+  .certificate-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .certificate-card {
+    min-height: 260px;
+  }
+
+  .certificate-img {
+    height: 180px;
+  }
+}
+
+/* Wide screens tweak */
+@media (min-width: 1280px) {
+  .certificate-section {
+    padding: 2.5rem;
+  }
+
+  .certificate-grid {
+    gap: 2rem;
+  }
+
+  .certificate-img {
+    height: 200px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .certificate-section h2,
+  .certificate-card,
+  .certificate-img {
+    animation: none !important;
+    transition: none !important;
+  }
 }

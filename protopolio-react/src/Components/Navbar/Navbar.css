@@ -1,41 +1,81 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 40px;   /* smaller margin for mobile */
+  flex-wrap: wrap;     /* allow wrapping on small screens */
 }
 
 /* Navbar menu */
 .nav-menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 60px;
-    font-size: 20px;
-    font-weight: 500;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;           /* smaller gap on mobile */
+  font-size: 16px;
+  font-weight: 500;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  padding: 0;
 }
 
-/* Navbar links */
 .nav-menu a {
-    color: #fff;           /* White color for links */
-    text-decoration: none; /* Remove underline */
-    transition: 0.3s;      /* Smooth hover effect */
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .nav-menu a:hover {
-    color: #DA7C25;        /* Optional hover color */
+  color: #DA7C25;
 }
 
 /* Connect button */
 .nav-connect {
-    padding: 20px 40px;
-    border-radius: 50px;
-    background: linear-gradient(276deg, #00ff99 0.36%, #00ff99 100%);
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.5s;
+  padding: 12px 24px;
+  border-radius: 50px;
+  background: linear-gradient(276deg, #00ff99 0.36%, #00ff99 100%);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-top: 10px; /* gives space when stacked */
 }
 
 .nav-connect:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* ---------- Responsive Breakpoints ---------- */
+
+/* Tablets (≥768px) */
+@media (min-width: 768px) {
+  .navbar {
+    margin: 20px 80px;
+  }
+
+  .nav-menu {
+    gap: 40px;
+    font-size: 18px;
+  }
+
+  .nav-connect {
+    font-size: 18px;
+    padding: 16px 32px;
+  }
+}
+
+/* Desktops (≥1024px) */
+@media (min-width: 1024px) {
+  .navbar {
+    margin: 20px 170px;
+  }
+
+  .nav-menu {
+    gap: 60px;
+    font-size: 20px;
+  }
+
+  .nav-connect {
+    font-size: 22px;
+    padding: 20px 40px;
+  }
 }
