@@ -38,6 +38,12 @@ const projects = [
     github: "https://github.com/anu123538/smart_AI_chatbot",
   },
   {
+    title: "api",
+    description: "AI Chatbot using Python and Flask Using OpenAI API.",
+    img: "",
+    github: "https://github.com/anu123538/smart_AI_chatbot",
+  },
+  {
     title: "Eventrya website",
     description: "Event management platform with user registration , event listings ,ticket booking and seat booking.",
     img: evproject,
