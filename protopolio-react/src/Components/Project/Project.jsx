@@ -10,7 +10,9 @@ import amproject from '../../assets/am.png';
 import jproject from '../../assets/j.png';
 import evproject from '../../assets/ev.png';
 import fdproject from '../../assets/fd.png';
-
+import weproject from '../../assets/we.png';
+import ecoproject from '../../assets/eco.png';
+import jestproject from '../../assets/jest.png';
 const projects = [
   {
     title: "Automation testing linkdln post upload using java selenium",
@@ -38,10 +40,10 @@ const projects = [
     github: "https://github.com/anu123538/smart_AI_chatbot",
   },
   {
-    title: "api",
-    description: "AI Chatbot using Python and Flask Using OpenAI API.",
-    img: "",
-    github: "https://github.com/anu123538/smart_AI_chatbot",
+    title: "Weather Notifer using API",
+    description: "Weather notifier application using Python ,API and Flask.",
+    img: weproject,
+    github: "https://github.com/anu123538/Weather--Notify-using-API",
   },
   {
     title: "Eventrya website",
@@ -54,6 +56,20 @@ const projects = [
     description: "Java-based hotel management application.",
     img: hproject,
     github: "https://github.com/anu123538/hotel_management_system-in-java",
+  },
+  {
+    title: "Automation testing e commerce website using java selenium",
+    description:"Automation script using Selenium ecommerce website",
+      
+    img: ecoproject, // Empty image — fallback will be used
+    github: "https://github.com/anu123538/Automated-Testing-e-commerce-website-using-selenium",
+  },
+  {
+    title: " Testing e commerce website  cart pageusing jest",
+    description:"Unit testing for e commerce website cart page using jest.",
+      
+    img: jestproject, // Empty image — fallback will be used
+    github: "https://github.com/anu123538/Testing-e-commerce-cart-using-jest",
   },
   {
     title: "E-commerce Website",
