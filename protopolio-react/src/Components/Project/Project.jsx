@@ -40,7 +40,7 @@ const projects = [
     github: "https://github.com/anu123538/smart_AI_chatbot",
   },
   {
-    title: "Weather Notifer using API",
+    title: "Weather Notifer using OpenWeatherMap API.",
     description: "Weather notifier application using Python ,API and Flask.",
     img: weproject,
     github: "https://github.com/anu123538/Weather--Notify-using-API",
