@@ -38,7 +38,7 @@
 
 /* gradient text */
 .hero h1 span {
-  background: linear-gradient(270deg, #00ff99 10%, #00ff99 100%);
+  background: linear-gradient(270deg, #C27B8E 10%, #C27B8E 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -49,7 +49,7 @@
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid #00ff99;
+  border-right: 3px solid #C27B8E;
   animation: typing 3s steps(30, end), blink 0.7s step-end infinite;
   vertical-align: middle;
 }
@@ -90,7 +90,7 @@
 .hero-connect {
   padding: 12px 22px;
   border-radius: 30px;
-  background: linear-gradient(264deg, #00ff99 -5.09%, #00ff99 100%);
+  background: linear-gradient(264deg, #C27B8E -5.09%, #C27B8E 100%);
   cursor: pointer;
   transition: transform .25s ease, border-color .25s ease;
   color: black;

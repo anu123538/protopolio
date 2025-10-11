@@ -15,7 +15,7 @@
 .animated-heading {
   font-size: 32px;          /* mobile size */
   font-weight: 700;
-  color: #00ff99;
+  color: #C27B8E;
   position: relative;
   display: inline-block;
   margin: 1.5rem auto;
@@ -131,7 +131,7 @@
   padding: 8px 12px;
   border-radius: 8px;
   background: rgba(0, 255, 153, 0.08);
-  color: #00ff99;
+  color: #C27B8E;
   border: 1px solid rgba(0, 255, 153, 0.12);
   font-weight: 600;
   text-decoration: none;

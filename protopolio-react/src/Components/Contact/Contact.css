@@ -27,7 +27,7 @@
 }
 
 .contact-form h2 {
-  color: #00ff99; /* bright green */
+  color: #C27B8E; /* bright green */
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -64,7 +64,7 @@
 }
 
 .contact-form button {
-  background-color: #00cc66;
+  background-color: #C27B8E;
   border: none;
   color: #0f1624;
   font-weight: 600;
@@ -76,7 +76,7 @@
 }
 
 .contact-form button:hover {
-  background-color: #00b359;
+  background-color: #C27B8E;
 }
 
 /* Contact info section */
@@ -90,7 +90,7 @@
 }
 
 .contact-info h2 {
-  color: #00ff99;
+  color:#C27B8E ;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -117,7 +117,7 @@
 }
 
 .contact-info ul li svg {
-  color: #00cc66;
+  color: #C27B8E;
   font-size: 1.2rem;
 }
 
@@ -127,7 +127,7 @@
 }
 
 .social-media h3 {
-  color: #00ff99;
+  color: #C27B8E;
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -140,7 +140,7 @@
 }
 
 .social-media a:hover {
-  color: #00cc66;
+  color: #C27B8E;
 }
 
 /* Responsive */

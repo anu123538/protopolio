@@ -13,7 +13,7 @@
 .certificate-section h2 {
   font-size: 28px; /* mobile */
   margin-bottom: 1rem;
-  color: #00ff99;
+  color: #C27B8E;
   position: relative;
   display: inline-block;
   padding-bottom: 8px;
@@ -110,7 +110,7 @@
 .certificate-info h3 {
   font-size: 1.05rem;
   margin: 0;
-  color: #00ff99;
+  color: #C27B8E
 }
 
 .certificate-info .issuer {
@@ -141,7 +141,7 @@
   padding: 6px 8px;
   border-radius: 6px;
   background: rgba(0,255,153,0.06);
-  color: #00ff99;
+  color: #C27B8E;
   border: 1px solid rgba(0,255,153,0.08);
 }
 

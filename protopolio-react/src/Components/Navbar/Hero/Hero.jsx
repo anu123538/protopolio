@@ -16,7 +16,7 @@ const Hero = () => {
 
       <h1>
         <span>I'm Anuththara Imanshi, </span>
-        <span className="typing-animation">Quality Assurance Engineer</span>
+        <span className="typing-animation">UNDERGRADUATE</span>
       </h1>
       
       <div className="hero-action">
