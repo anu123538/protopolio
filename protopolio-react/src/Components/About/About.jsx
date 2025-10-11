@@ -18,7 +18,7 @@ const About = () => {
       <div className="about-right">
         <div className="about-para">
           <p>
-            A third-year student studying BSc Software Engineering at CINEC Campus. I’m interested in software testing and quality assurance. I like finding bugs, writing test cases, and learning tools like Jira, Postman, JMeter, and JUnit. I’m excited to start my career as a QA Intern and gain real experience</p>
+            A third-year student studying BSc Software Engineering at CINEC Campus. I’m interested in software testing ,quality assurance and AI. I like finding bugs, writing test cases, and learning tools like Jira, Postman, JMeter, and JUnit. I’m excited to start my career as a QA Intern and gain real experience</p>
        </div>
         <div className="about-skills">
   <div className="about-skill"><p>HTML & CSS</p><hr style={{width:"70%"}} /></div>
