@@ -58,7 +58,7 @@ const certificates = [
 const Certificate = () => {
   return (
     <section className="certificate-section">
-      <h2>My Certifications</h2>
+      <h2>My certificates</h2>
       <div className="certificate-grid">
         {certificates.map(({ id, title, issuer, year, image }) => (
           <div key={id} className="certificate-card">
