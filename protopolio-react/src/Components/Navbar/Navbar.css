@@ -1,47 +1,90 @@
+/* ---------- Navbar Base ---------- */
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 40px;   /* smaller margin for mobile */
-  flex-wrap: wrap;     /* allow wrapping on small screens */
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 0 30px;                /* Padding මදක් අඩු කළා එක පේළියට ගැනීමට */
+  background-color: #1F1F1F;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  height: 90px;                   /* Navbar උස 90px ලෙස සකස් කළා */
+  box-sizing: border-box;
 }
 
-/* Navbar menu */
+.nav-logo h2 {
+  color: #C27B8E;
+  margin: 0;
+  font-weight: 800;               /* Logo එක තවත් තද කළා */
+  font-size: 28px;                /* Logo font size වැඩි කළා */
+  white-space: nowrap;
+}
+
+/* ---------- Navbar Menu ---------- */
 .nav-menu {
   display: flex;
   align-items: center;
+  height: 100%;
+  gap: 10px;                      /* Menu අතර මූලික පරතරය */
   list-style: none;
-  gap: 20px;           /* smaller gap on mobile */
-  font-size: 16px;
-  font-weight: 500;
-  flex-wrap: wrap;
-  margin: 10px 0;
+  margin: 0;
   padding: 0;
 }
 
-.nav-menu a {
+.nav-menu li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu li a {
   color: #fff;
   text-decoration: none;
-  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 18px;                /* අකුරු අතර ඉඩ */
+  font-size: 19px;                /* අකුරු ලොකු කළා */
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;            /* අකුරු කැඩීම වළක්වයි */
 }
 
-.nav-menu a:hover {
-  color: #DA7C25;
+.nav-menu li a:hover {
+  background-color: #333;
 }
 
-/* Connect button */
+.nav-menu li a.active-link {
+  background-color: #C27B8E;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* ---------- Connect Button ---------- */
 .nav-connect {
-  padding: 12px 24px;
-  border-radius: 50px;
-  background: linear-gradient(276deg, #C27B8E 0.36%, #C27B8E 100%);
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.5s;
-  margin-top: 10px; /* gives space when stacked */
+  display: flex;
+  align-items: center;
 }
 
-.nav-connect:hover {
+.nav-connect .connect-btn {
+  padding: 12px 28px;
+  border-radius: 50px;
+  background: #C27B8E;
+  font-size: 19px;                /* Button අකුරු ලොකු කළා */
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  white-space: nowrap;
+  transition: transform 0.3s, background 0.3s;
+  display: inline-block;
+}
+
+.nav-connect .connect-btn:hover {
   transform: scale(1.05);
+  background: #b16a7d;
 }
 
 /* ---------- Responsive Breakpoints ---------- */
@@ -49,33 +92,23 @@
 /* Tablets (≥768px) */
 @media (min-width: 768px) {
   .navbar {
-    margin: 20px 80px;
+    padding: 0 40px;
   }
-
   .nav-menu {
-    gap: 40px;
-    font-size: 18px;
-  }
-
-  .nav-connect {
-    font-size: 18px;
-    padding: 16px 32px;
+    gap: 15px;
   }
 }
 
 /* Desktops (≥1024px) */
 @media (min-width: 1024px) {
   .navbar {
-    margin: 20px 170px;
+    padding: 0 50px;              /* Padding ඕනෑවට වඩා වැඩි නොකර එක පේළියට තබා ගනියි */
   }
-
   .nav-menu {
-    gap: 60px;
+    gap: 25px;                    /* ලොකු screen වලදී පරතරය වැඩි කළා */
     font-size: 20px;
   }
-
-  .nav-connect {
-    font-size: 22px;
-    padding: 20px 40px;
+  .nav-menu li a {
+    font-size: 20px;              /* Desktop එකේදී අකුරු තවත් ලොකු කළා */
   }
 }
