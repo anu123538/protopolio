@@ -71,12 +71,7 @@ const projects = [
     img: jestproject, // Empty image — fallback will be used
     github: "https://github.com/anu123538/Testing-e-commerce-cart-using-jest",
   },
-  {
-    title: "E-commerce Website",
-    description: "Full-featured e-commerce platform using React ",
-    img: "",
-    github: "https://github.com/anu123538/ecommerce-website",
-  },
+  
      {
     title: "Testing Student Management System using JUNIT",
     description: "Unit testing for student management system using JUNIT.",
