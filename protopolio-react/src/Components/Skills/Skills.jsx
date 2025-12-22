@@ -36,7 +36,7 @@ const Skills = () => {
             <li>Test Case Design & Execution</li>
             <li>Bug Tracking (JIRA, Bugzilla)</li>
             <li>White and Black box testing</li>
-            <li>Performance Testing</li>
+            <li>Performance Testing(basic)</li>
             <li>Test Management(TestRail)</li>
             <li>SQL / Database Testing</li>
             <li>API Testing (Postman)</li>
