@@ -1,224 +1,168 @@
-/* Project.css - mobile-first responsive */
+:root {
+  /* Dark Theme & Rose Pink Colors */
+  --primary-rose: #C27B8E;        /* ප්‍රධාන රෝස පාට */
+  --github-dark: #1e293b;         
+  --text-muted: #94a3b8;          
+  --bg-dark-body: #020617;        
+  --card-bg: #0f172a;             
+  --border-color: #1e293b;
+  --accent-yellow: #ffb703;       
+}
 
-/* Section container */
 .project-container {
-  padding: 1.5rem 1rem;
-  background-color: #0f1624;
-  color: #e0e6f1;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
+  padding: 80px 20px;
+  background-color: var(--bg-dark-body);
   text-align: center;
-  box-sizing: border-box;
+  min-height: 100vh;
 }
 
-/* Animated heading (responsive) */
-.animated-heading {
-  font-size: 32px;          /* mobile size */
-  font-weight: 700;
-  color: #C27B8E;
-  position: relative;
+/* Heading Style (60px + Underline) */
+.heading-wrapper {
+  margin-bottom: 60px;
   display: inline-block;
-  margin: 1.5rem auto;
-  padding-bottom: 8px;
-
-  opacity: 0;
-  transform: translateY(12px);
-  animation: fadeSlideUp 0.9s ease forwards;
-  animation-delay: 0.2s;
 }
 
-/* Orange underline */
-.animated-heading::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 48px;
-  height: 4px;
-  background-color: orange;
-  border-radius: 2px;
+.animated-heading {
+  font-size: 60px; 
+  color: var(--primary-rose);
+  margin-bottom: 12px;
+  font-weight: 800;
+  text-transform: capitalize;
 }
 
-/* Slide up fade-in animation */
-@keyframes fadeSlideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.underline {
+  height: 5px;
+  width: 90px;
+  background-color: var(--accent-yellow);
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
-/* Grid layout for cards */
+/* Grid Layout */
 .project-grid {
   display: grid;
-  gap: 1rem; /* smaller gap on mobile */
-  grid-template-columns: 1fr; /* single column on small screens */
-  margin-top: 1.25rem;
-  align-items: stretch;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
-/* Project card container */
+/* Card Styling (As per image_b93d9c.jpg) */
 .project-card {
-  background-color: #1c2948;
-  border-radius: 10px;
+  background: var(--card-bg);
+  border-radius: 20px; /* ලස්සනට Rounded කර ඇත */
   overflow: hidden;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  border: 1px solid var(--border-color);
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.65);
+  transform: translateY(-12px);
+  border-color: var(--primary-rose);
+  box-shadow: 0 15px 35px rgba(194, 123, 142, 0.15);
 }
 
-/* Link wraps image */
-.project-card a {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Project image - responsive height */
-.project-card img {
+.project-image-wrapper {
   width: 100%;
-  height: 160px; /* mobile-friendly */
+  height: 210px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-image-wrapper img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  transition: transform 0.28s ease;
-  display: block;
+  transition: transform 0.6s ease;
+  opacity: 0.85;
 }
 
-.project-card img:hover {
-  transform: scale(1.04);
+.project-card:hover .project-image-wrapper img {
+  transform: scale(1.1);
+  opacity: 1;
 }
 
-/* Project text content */
 .project-content {
-  padding: 1rem;
+  padding: 28px;
+  text-align: left;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  flex-grow: 1;
 }
 
 .project-content h3 {
-  margin: 0;
-  font-size: 1.05rem;
-  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-rose); /* Card title එකත් Rose Pink */
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
 }
 
 .project-content p {
-  margin: 0;
   font-size: 0.95rem;
-  color: #a0aec0;
-  line-height: 1.5;
-  flex-grow: 1;
+  color: var(--text-muted);
+  margin-bottom: 25px;
+  line-height: 1.6;
+  min-height: 50px;
 }
 
-/* Optional footer inside card for buttons/links */
-.project-footer {
-  margin-top: 0.75rem;
+/* Tech Badges (As per image_b93d9c.jpg) */
+.tech-stack {
   display: flex;
-  gap: 0.5rem;
-  justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
 }
 
-/* Button style (example) */
-.project-btn {
-  padding: 8px 12px;
-  border-radius: 8px;
-  background: rgba(0, 255, 153, 0.08);
-  color: #C27B8E;
-  border: 1px solid rgba(0, 255, 153, 0.12);
+.tech-tag {
+  background: rgba(194, 123, 142, 0.08); 
+  color: var(--primary-rose);
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.8rem;
   font-weight: 600;
+  border: 1px solid rgba(194, 123, 142, 0.25);
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(194, 123, 142, 0.15);
+  border-color: var(--primary-rose);
+}
+
+/* GitHub Button */
+.github-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: rgba(30, 41, 59, 0.8);
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: transform .18s ease, background .18s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
 }
 
-.project-btn:hover {
-  transform: translateY(-3px);
+.github-button:hover {
+  background-color: var(--primary-rose);
+  color: #000;
+  transform: translateY(-2px);
 }
 
-/* ---------- Breakpoints ---------- */
-
-/* Small tablets and up */
-@media (min-width: 640px) {
-  .project-container {
-    padding: 2rem 2rem;
-  }
-
+/* Responsive */
+@media (max-width: 768px) {
   .animated-heading {
-    font-size: 40px;
+    font-size: 45px;
   }
-
   .project-grid {
-    gap: 1.25rem;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  }
-
-  .project-card img {
-    height: 180px;
-  }
-}
-
-/* Medium screens (desktop) */
-@media (min-width: 1024px) {
-  .project-container {
-    padding: 2.5rem 3.5rem;
-  }
-
-  .animated-heading {
-    font-size: 56px;
-  }
-
-  .animated-heading::after {
-    width: 60px;
-  }
-
-  .project-grid {
-    gap: 2rem;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  }
-
-  .project-card img {
-    height: 200px;
-  }
-
-  .project-content h3 {
-    font-size: 1.15rem;
-  }
-
-  .project-content p {
-    font-size: 1rem;
-  }
-}
-
-/* Large screens (wide desktop) */
-@media (min-width: 1280px) {
-  .project-container {
-    padding: 3rem 6rem;
-  }
-
-  .animated-heading {
-    font-size: 60px;
-  }
-
-  .project-card img {
-    height: 220px;
-  }
-}
-
-/* Reduced motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  .animated-heading,
-  .project-card,
-  .project-card img,
-  .project-btn {
-    animation: none !important;
-    transition: none !important;
+    gap: 20px;
   }
 }

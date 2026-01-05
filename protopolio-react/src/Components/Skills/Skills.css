@@ -14,7 +14,7 @@
   color: #C27B8E;
   margin-bottom: 50px;
   animation: fadeInUp 1s ease-out;
-  text-align: left; /* Left align the heading */
+  text-align: center; /* Center align the heading */
 }
 
 .skill-title::after {

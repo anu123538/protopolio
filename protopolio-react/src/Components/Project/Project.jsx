@@ -13,112 +13,140 @@ import fdproject from '../../assets/fd.png';
 import weproject from '../../assets/we.png';
 import ecoproject from '../../assets/eco.png';
 import jestproject from '../../assets/jest.png';
+
 const projects = [
   {
-    title: "Automation testing linkdln post upload using java selenium",
-    description:
-      "Automation script using Selenium for Linkdln post upload.",
-    img: Lproject, // Empty image — fallback will be used
+    title: "LinkedIn Post Automation",
+    description: "Automation script using Selenium for LinkedIn post upload and interaction.",
+    img: Lproject,
     github: "https://github.com/anu123538/java-selenium-automation-tests",
+    tech: ["Java", "Selenium", "WebDriver"]
   },
   {
-    title: "Automation testing hotelreservation system using selenium and JMETER",
-    description: "Automation script using Selenium for hotel  reservation system.",
+    title: "Hotel Reservation Testing",
+    description: "End-to-end automation and performance testing for hotel booking flows.",
     img: amproject,
     github: "https://github.com/anu123538/Testing-Hotel-Reservation-System-using-Selenium-and-Jmeter",
+    tech: ["Selenium", "JMeter", "Java"]
   },
   {
-    title: " Automation Testing education separtment website using JMETER",
-    description: "Performance testing for eduaction department website using JMeter.",
-    img:dproject,
+    title: "Education Dept. Performance Test",
+    description: "Load and performance testing for the education department website.",
+    img: dproject,
     github: "https://github.com/anu123538/Education-Website-TestPlan-JMeter",
+    tech: ["JMeter", "Performance Testing"]
   },
   {
-    title: "Smart AI Chatbot using openrouter API",
-    description: "AI Chatbot using Python and Flask Using OpenAI API.",
+    title: "Smart AI Chatbot",
+    description: "AI Chatbot developed using Python and OpenRouter API integration.",
     img: sproject,
     github: "https://github.com/anu123538/smart_AI_chatbot",
+    tech: ["Python", "Flask", "AI API"]
   },
   {
-    title: "Weather Notifer using OpenWeatherMap API.",
-    description: "Weather notifier application using Python ,API and Flask.",
+    title: "Weather Notifier",
+    description: "Real-time weather notification app using OpenWeatherMap API.",
     img: weproject,
     github: "https://github.com/anu123538/Weather--Notify-using-API",
+    tech: ["Python", "API", "Flask"]
   },
   {
-    title: "Eventrya website",
-    description: "Event management platform with user registration , event listings ,ticket booking and seat booking.",
+    title: "Eventrya Platform",
+    description: "Full-stack event management system with ticket booking features.",
     img: evproject,
     github: "https://github.com/eventryaprojectPM",
+    tech: ["React", "Node.js", "MongoDB"]
   },
   {
     title: "Hotel Management System",
-    description: "Java-based hotel management application.",
+    description: "Desktop-based hotel management application for admin tasks.",
     img: hproject,
     github: "https://github.com/anu123538/hotel_management_system-in-java",
+    tech: ["Java", "Swing", "MySQL"]
   },
   {
-    title: "Automation testing e commerce website using java selenium",
-    description:"Automation script using Selenium ecommerce website",
-      
-    img: ecoproject, // Empty image — fallback will be used
+    title: "E-Commerce Automation",
+    description: "Automated regression testing suite for an e-commerce platform.",
+    img: ecoproject,
     github: "https://github.com/anu123538/Automated-Testing-e-commerce-website-using-selenium",
+    tech: ["Java", "Selenium", "TestNG"]
   },
   {
-    title: " Testing e commerce website  cart pageusing jest",
-    description:"Unit testing for e commerce website cart page using jest.",
-      
-    img: jestproject, // Empty image — fallback will be used
+    title: "E-Commerce Cart Unit Testing",
+    description: "Unit testing for shopping cart logic to ensure data integrity.",
+    img: jestproject,
     github: "https://github.com/anu123538/Testing-e-commerce-cart-using-jest",
-  },
-  
-     {
-    title: "Testing Student Management System using JUNIT",
-    description: "Unit testing for student management system using JUNIT.",
-    img:jproject ,
-    github: "https://github.com/anu123538/Testing-Student-Management-System-using-JUNIT",
+    tech: ["Jest", "JavaScript", "Unit Testing"]
   },
   {
-    title: "class attendence management system",
-    description: "class attendence management system using php", 
+    title: "SMS Unit Testing",
+    description: "Unit testing for Student Management System using JUnit framework.",
+    img: jproject,
+    github: "https://github.com/anu123538/Testing-Student-Management-System-using-JUNIT",
+    tech: ["JUnit", "Java", "Testing"]
+  },
+  {
+    title: "Attendance Management",
+    description: "Web-based class attendance tracking system for schools.",
     img: cproject,
     github: "https://github.com/anu123538/class-attendance-management",
+    tech: ["PHP", "MySQL", "Bootstrap"]
   },
   {
-    title: "Food Delivery website",
-    description: "Food delivery platform with real-time tracking.",
+    title: "Food Delivery Platform",
+    description: "Modern food delivery website with real-time tracking features.",
     img: fdproject,
     github: "https://github.com/anu123538/projects",
+    tech: ["React", "Firebase"]
   },
   {
-    title: "Arogya Medical Website",
-    description: "Medical services and appointment booking platform using python",
+    title: "Arogya Medical Center",
+    description: "Medical service booking and appointment management platform.",
     img: aproject,
     github: "https://github.com/anu123538/Arogya-medical-center",
-  },
-
-
+    tech: ["Python", "Django", "SQLite"]
+  }
 ];
 
 const Project = () => {
   return (
     <div className="project-container">
-      <h2 className="animated-heading">My Projects</h2>
+      {/* Heading Wrapper (My Certificates Style) */}
+      <div className="heading-wrapper">
+        <h2 className="animated-heading">My Projects</h2>
+        <div className="underline"></div>
+      </div>
+      
+      <p className="section-subtitle">Showcasing my work in Software Testing & Development</p>
+      
       <div className="project-grid">
         {projects.map((proj, index) => (
           <div key={index} className="project-card">
-            <a href={proj.github} target="_blank" rel="noopener noreferrer">
+            <div className="project-image-wrapper">
               <img
-                src={
-                  proj.img ||
-                  "https://via.placeholder.com/350x150?text=No+Image"
-                }
+                src={proj.img || "https://via.placeholder.com/350x200?text=Project+Preview"}
                 alt={proj.title}
               />
-            </a>
+            </div>
+            
             <div className="project-content">
               <h3>{proj.title}</h3>
               <p>{proj.description}</p>
+              
+              <div className="tech-stack">
+                {proj.tech.map((t, i) => (
+                  <span key={i} className="tech-tag">{t}</span>
+                ))}
+              </div>
+
+              <div className="project-actions">
+                <a href={proj.github} target="_blank" rel="noopener noreferrer" className="github-button">
+                  <span className="btn-text">View Code</span>
+                  <svg className="github-icon" viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         ))}
