@@ -1,5 +1,6 @@
 import React from "react";
 import "./Project.css";
+// කලින් තිබුණු imports
 import sproject from '../../assets/s.png';
 import Lproject from '../../assets/L.jpg';
 import dproject from '../../assets/d.jpeg';
@@ -13,8 +14,25 @@ import fdproject from '../../assets/fd.png';
 import weproject from '../../assets/we.png';
 import ecoproject from '../../assets/eco.png';
 import jestproject from '../../assets/jest.png';
+import baproject from '../../assets/background.jpg';
+import aaanproject from '../../assets/aaan.png';
+import suwasewaproject from '../../assets/suwasewa.png';
+
+// අලුත් Project Images (මෙම නම් ඔයාගේ assets වල හැටියට වෙනස් කරගන්න)
+// import predictImg from '../../assets/predict.png'; 
+// import asuwaImg from '../../assets/asuwa.png';
+// import inventoryImg from '../../assets/inventory.png';
+// import waterImg from '../../assets/water.png';
 
 const projects = [
+  // --- 1. Predictive Analytics (මුලටම දැම්මා - ඉතා වැදගත්) ---
+  {
+    title: "Multi9 Predictive Analytics",
+    description: "Income & repair time forecasting system using data analytics and predictive modeling.",
+    img: aaanproject, // පසුව අදාළ image එක දාන්න
+    github: "https://github.com/Chamodi27s/Predictive-Income-and-Repair-Time-Analytics-and-Forecasting-System-for-Multi9-Computer-Systems",
+    tech: ["PHP", "MySQL", "Chart.js", "Forecasting"]
+  },
   {
     title: "LinkedIn Post Automation",
     description: "Automation script using Selenium for LinkedIn post upload and interaction.",
@@ -29,6 +47,14 @@ const projects = [
     github: "https://github.com/anu123538/Testing-Hotel-Reservation-System-using-Selenium-and-Jmeter",
     tech: ["Selenium", "JMeter", "Java"]
   },
+  // --- 2. Asuwa Sewana (Development Knowledge පෙන්වන්න) ---
+  {
+    title: "suwa Sewana Platform",
+    description: "Digital health services platform for medical appointments and patient records.",
+    img:suwasewaproject, // පසුව අදාළ image එක දාන්න
+    github: "https://github.com/SaduAmarasekara/suwasewana",
+    tech: ["React", "MongoDB", "Node.js"]
+  },
   {
     title: "Education Dept. Performance Test",
     description: "Load and performance testing for the education department website.",
@@ -36,12 +62,28 @@ const projects = [
     github: "https://github.com/anu123538/Education-Website-TestPlan-JMeter",
     tech: ["JMeter", "Performance Testing"]
   },
+  // --- 3. Inventory Analysis (Mobile Testing Knowledge) ---
+  {
+    title: "Inventory Analysis App",
+    description: "Flutter-based mobile app for real-time inventory tracking and stock analysis.",
+    img: fdproject, // පසුව අදාළ image එක දාන්න
+    github: "https://github.com/anu123538/inventory-analysis-flutter",
+    tech: ["Flutter", "Firebase", "Dart"]
+  },
   {
     title: "Smart AI Chatbot",
     description: "AI Chatbot developed using Python and OpenRouter API integration.",
     img: sproject,
     github: "https://github.com/anu123538/smart_AI_chatbot",
     tech: ["Python", "Flask", "AI API"]
+  },
+  // --- 4. Daily Water Reminder (Java/Mobile Knowledge) ---
+  {
+    title: "Daily Water Reminder",
+    description: "Android health assistant app with smart notifications and intake tracking.",
+    img: baproject, // පසුව අදාළ image එක දාන්න
+    github: "https://github.com/anu123538/Daily-Water-Reminder-Mobile-app",
+    tech: ["Java", "Android"]
   },
   {
     title: "Weather Notifier",
@@ -56,13 +98,6 @@ const projects = [
     img: evproject,
     github: "https://github.com/eventryaprojectPM",
     tech: ["React", "Node.js", "MongoDB"]
-  },
-  {
-    title: "Hotel Management System",
-    description: "Desktop-based hotel management application for admin tasks.",
-    img: hproject,
-    github: "https://github.com/anu123538/hotel_management_system-in-java",
-    tech: ["Java", "Swing", "MySQL"]
   },
   {
     title: "E-Commerce Automation",
@@ -86,18 +121,18 @@ const projects = [
     tech: ["JUnit", "Java", "Testing"]
   },
   {
+    title: "Hotel Management System",
+    description: "Desktop-based hotel management application for admin tasks.",
+    img: hproject,
+    github: "https://github.com/anu123538/hotel_management_system-in-java",
+    tech: ["Java", "Swing", "MySQL"]
+  },
+  {
     title: "Attendance Management",
     description: "Web-based class attendance tracking system for schools.",
     img: cproject,
     github: "https://github.com/anu123538/class-attendance-management",
     tech: ["PHP", "MySQL", "Bootstrap"]
-  },
-  {
-    title: "Food Delivery Platform",
-    description: "Modern food delivery website with real-time tracking features.",
-    img: fdproject,
-    github: "https://github.com/anu123538/projects",
-    tech: ["React", "Firebase"]
   },
   {
     title: "Arogya Medical Center",
@@ -111,13 +146,10 @@ const projects = [
 const Project = () => {
   return (
     <div className="project-container">
-      {/* Heading Wrapper (My Certificates Style) */}
       <div className="heading-wrapper">
         <h2 className="animated-heading">My Projects</h2>
         <div className="underline"></div>
       </div>
-      
-      <p className="section-subtitle">Showcasing my work in Software Testing & Development</p>
       
       <div className="project-grid">
         {projects.map((proj, index) => (
