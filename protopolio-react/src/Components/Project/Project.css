@@ -1,168 +1,225 @@
-:root {
-  /* Dark Theme & Rose Pink Colors */
-  --primary-rose: #C27B8E;        /* ප්‍රධාන රෝස පාට */
-  --github-dark: #1e293b;         
-  --text-muted: #94a3b8;          
-  --bg-dark-body: #020617;        
-  --card-bg: #0f172a;             
-  --border-color: #1e293b;
-  --accent-yellow: #ffb703;       
-}
-
+/* Container and Heading */
 .project-container {
-  padding: 80px 20px;
-  background-color: var(--bg-dark-body);
-  text-align: center;
-  min-height: 100vh;
+    padding: 80px 20px;
+    background-color: #0d0d16;
 }
 
-/* Heading Style (60px + Underline) */
 .heading-wrapper {
-  margin-bottom: 60px;
-  display: inline-block;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .animated-heading {
-  font-size: 60px; 
-  color: var(--primary-rose);
-  margin-bottom: 12px;
-  font-weight: 800;
-  text-transform: capitalize;
+    color: #b16a7d;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .underline {
-  height: 5px;
-  width: 90px;
-  background-color: var(--accent-yellow);
-  margin: 0 auto;
-  border-radius: 10px;
+    width: 60px;
+    height: 4px;
+    background: #b16a7d;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(177, 106, 125, 0.5);
 }
 
-/* Grid Layout */
+/* Grid System */
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 35px;
-  max-width: 1250px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1240px;
+    margin: 0 auto;
 }
 
-/* Card Styling (As per image_b93d9c.jpg) */
+/* Card Styling */
 .project-card {
-  background: var(--card-bg);
-  border-radius: 20px; /* ලස්සනට Rounded කර ඇත */
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--border-color);
+    background: #16162a;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .project-card:hover {
-  transform: translateY(-12px);
-  border-color: var(--primary-rose);
-  box-shadow: 0 15px 35px rgba(194, 123, 142, 0.15);
+    transform: translateY(-12px);
+    border-color: rgba(177, 106, 125, 0.6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
+/* Image Wrapper */
 .project-image-wrapper {
-  width: 100%;
-  height: 210px;
-  overflow: hidden;
-  border-bottom: 1px solid var(--border-color);
+    height: 200px;
+    overflow: hidden;
+    position: relative;
 }
 
 .project-image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-  opacity: 0.85;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
 }
 
 .project-card:hover .project-image-wrapper img {
-  transform: scale(1.1);
-  opacity: 1;
+    transform: scale(1.1);
 }
 
+/* Content Area */
 .project-content {
-  padding: 28px;
-  text-align: left;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .project-content h3 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--primary-rose); /* Card title එකත් Rose Pink */
-  margin-bottom: 14px;
-  letter-spacing: 0.5px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 
-.project-content p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  margin-bottom: 25px;
-  line-height: 1.6;
-  min-height: 50px;
+.main-desc {
+    color: #a0a0c0;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
-/* Tech Badges (As per image_b93d9c.jpg) */
+/* View Details Toggle Button */
+.details-toggle-btn {
+    background: transparent;
+    border: none;
+    color: #b16a7d;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-align: left;
+    margin-bottom: 15px;
+    padding: 0;
+    transition: 0.3s;
+}
+
+.details-toggle-btn:hover { color: #ffffff; }
+
+/* Hidden Details Panel */
+.project-details {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(177, 106, 125, 0.1);
+}
+
+.project-details p {
+    font-size: 0.85rem;
+    color: #cfcfdf;
+    margin: 8px 0 !important;
+}
+
+.project-details strong { color: #b16a7d; }
+
+.outcome-text {
+    border-left: 3px solid #b16a7d;
+    background: rgba(177, 106, 125, 0.05);
+    padding: 2px 12px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 10px;
+}
+
+/* Tech Tags */
 .tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
 }
 
 .tech-tag {
-  background: rgba(194, 123, 142, 0.08); 
-  color: var(--primary-rose);
-  padding: 5px 15px;
-  border-radius: 50px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  border: 1px solid rgba(194, 123, 142, 0.25);
-  transition: all 0.3s ease;
+    background: rgba(177, 106, 125, 0.12);
+    color: #b16a7d;
+    padding: 5px 14px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    border: 1px solid rgba(177, 106, 125, 0.25);
 }
 
-.tech-tag:hover {
-  background: rgba(194, 123, 142, 0.15);
-  border-color: var(--primary-rose);
+/* Button Group (Actions) */
+.project-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
 }
 
-/* GitHub Button */
+.github-button, .demo-button {
+    flex: 1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between text and icon */
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+/* View Code (Outline Style) */
 .github-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  background-color: rgba(30, 41, 59, 0.8);
-  color: white;
-  padding: 14px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: auto;
+    background: transparent;
+    color: #ffffff !important;
+    border: 2px solid #b16a7d;
+}
+
+.github-icon {
+    width: 18px;
+    height: 18px;
+    fill: #ffffff !important; /* Forces icon to be white */
+    flex-shrink: 0;
 }
 
 .github-button:hover {
-  background-color: var(--primary-rose);
-  color: #000;
-  transform: translateY(-2px);
+    background: rgba(177, 106, 125, 0.2);
+    border-color: #ffffff;
 }
 
-/* Responsive */
+/* Live Demo (Solid Style) */
+.demo-button {
+    background: #b16a7d;
+    color: white;
+    border: 2px solid #b16a7d;
+}
+
+.demo-button:hover {
+    background: #965666;
+    border-color: #965666;
+    transform: translateY(-2px);
+}
+
+/* Handle Card with Only GitHub Button */
+.project-actions .github-button:only-child {
+    background: #b16a7d;
+    border-color: #b16a7d;
+}
+
+/* Animation for FadeIn */
+.animated-fade {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Setup */
 @media (max-width: 768px) {
-  .animated-heading {
-    font-size: 45px;
-  }
-  .project-grid {
-    gap: 20px;
-  }
+    .project-grid { grid-template-columns: 1fr; }
+    .project-actions { flex-direction: column; }
 }
