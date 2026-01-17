@@ -12,15 +12,23 @@ const About = () => {
       </div>
 
       <div className="about-content">
-        {/* Left Side: Profile & GPA */}
+        {/* Left Side: Profile, Social Links & GPA */}
         <div className="about-left">
           <div className="image-frame">
             <img src={profile_img} alt="Profile" className="profile-img" />
           </div>
-          <div className="gpa-badge">
-            <h3>GPA: 4.0 / 4.0</h3>
-            <p>Academic Excellence</p>
+
+          {/* Social Links Section */}
+          <div className="about-social-links">
+            <a href="https://github.com/anu123538" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/anuththara-amarasingha-43b03a311/" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-linkedin"></i>
+            </a>
           </div>
+
+          
         </div>
 
         {/* Right Side: Description & Skills */}
@@ -68,11 +76,7 @@ const About = () => {
             <div className="skill-category">
               <h4>💻 Development & Languages</h4>
               <div className="skill-item">
-                <div className="skill-info"><span>HTML</span><span>85%</span></div>
-                <div className="skill-bar"><div className="fill" style={{ width: "85%" }}></div></div>
-              </div>
-               <div className="skill-item">
-                <div className="skill-info"><span>CSS</span><span>85%</span></div>
+                <div className="skill-info"><span>HTML & CSS</span><span>85%</span></div>
                 <div className="skill-bar"><div className="fill" style={{ width: "85%" }}></div></div>
               </div>
               <div className="skill-item">
@@ -87,7 +91,6 @@ const About = () => {
                 <div className="skill-info"><span>React</span><span>70%</span></div>
                 <div className="skill-bar"><div className="fill" style={{ width: "70%" }}></div></div>
               </div>
-             
               <div className="additional-tools">
                 <span className="tool-tag">SQL</span>
                 <span className="tool-tag">PHP</span>
