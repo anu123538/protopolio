@@ -1,49 +1,87 @@
 import React from 'react';
 import './Skills.css';
 import skillsImage from '../../assets/anu.jpg';
-import theme_pattern from '../../assets/theme_pattern.svg';
 
 const Skills = () => {
   return (
-    <div className="Skills">
-      <h1 className="skill-title">My Skills</h1>
-      <img src={theme_pattern} alt="Theme Pattern" className="about-pattern" />
+    <div className="Skills" id='skills'>
+      <div className="heading-wrapper">
+        <h1 className="skill-title">Skills</h1>
+        <div className="underline"></div>
+      </div>
 
       <div className="skills-container">
-        {/* ✅ Left side: Soft Skills */}
+        {/* Development Column */}
         <div className="skills-column animate-left">
-          <h2>💡 Soft Skills</h2>
-          <ul>
-            <li>Attention to Detail</li>
-            <li>Analytical Thinking</li>
-            <li>Problem Solving</li>
-            <li>Communication & Reporting</li>
-            <li>Team Collaboration</li>
-          </ul>
+          <h2>💻 Development</h2>
+          <div className="tech-skills-grid">
+            <div className="skill-group">
+              <h4>Java & Desktop GUI</h4>
+              <p>Core Java, <strong>Object-Oriented Programming (OOP)</strong>, Java Swing, Event Handling</p>
+            </div>
+            <div className="skill-group">
+              <h4>Web Development</h4>
+              <p>Java, Python, React.js, JavaScript (ES6+), PHP, HTML, CSS</p>
+            </div>
+            {/* ✅ අලුතින් එකතු කළ කොටස */}
+            <div className="skill-group">
+              <h4>Mobile App Development</h4>
+              <p>Flutter, Dart, Android Development (Basics)</p>
+            </div>
+            <div className="skill-group">
+              <h4>Backend & Database</h4>
+              <p>Node.js (Basic), Python (Basic), MySQL, MongoDB (Basic)</p>
+            </div>
+          </div>
         </div>
 
-        {/* ✅ Center: Image */}
+        {/* Center Profile Image */}
         <div className="skills-column image-center animate-fade">
-          <img src={skillsImage} alt="QA Skills Illustration" />
+          <div className="image-border">
+             <img src={skillsImage} alt="Profile" />
+          </div>
         </div>
 
-        {/* ✅ Right side: Technical Skills */}
+        {/* QA Column */}
         <div className="skills-column animate-right">
-          <h2>🛠 Technical Skills</h2>
-          <ul>
-            <li>Manual Testing</li>
-            <li>Automated Testing (Selenium /Junit/Jmeter/Jest) </li>
-            <li>Test Case Design & Execution</li>
-            <li>Bug Tracking (JIRA, Bugzilla)</li>
-            <li>White and Black box testing</li>
-            <li>Performance Testing(basic)</li>
-            <li>Test Management(TestRail)</li>
-            <li>SQL / Database Testing</li>
-            <li>API Testing (Postman)</li>
-            <li>Version Control (Git)</li>
-            <li>Agile & Scrum Methodologies</li>
-            <li>Figma</li>
-          </ul>
+          <h2>🛡️ QA & Automation</h2>
+          <div className="tech-skills-grid">
+            <div className="skill-group">
+              <h4>Automation Testing</h4>
+              <p>Playwright, Selenium WebDriver, JUnit, Jest, JMeter</p>
+            </div>
+            <div className="skill-group">
+              <h4>Tools & DevOps</h4>
+              <p>JIRA (Basic), Postman (API), GitHub Actions (CI/CD), Agile & Scrum, TestRail</p>
+            </div>
+            <div className="skill-group">
+              <h4>QA Methodology</h4>
+              <p>Manual Testing, White & Black Box, Test Case Design, SDLC/STLC</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Soft Skills Section */}
+      <div className="soft-skills-container animate-up">
+        <h2 className="soft-title">💡 Personal Strengths</h2>
+        <div className="soft-skills-grid">
+          <div className="soft-skill-card">
+            <h4>Analytical Thinking</h4>
+            <p>Breaking down complex problems into manageable solutions.</p>
+          </div>
+          <div className="soft-skill-card">
+            <h4>Problem Solving</h4>
+            <p>Finding efficient ways to resolve bugs and system issues.</p>
+          </div>
+          <div className="soft-skill-card">
+            <h4>Attention to Detail</h4>
+            <p>Ensuring every test case and code block is flawless.</p>
+          </div>
+          <div className="soft-skill-card">
+            <h4>Effective Reporting</h4>
+            <p>Clear communication of bugs and project progress.</p>
+          </div>
         </div>
       </div>
     </div>

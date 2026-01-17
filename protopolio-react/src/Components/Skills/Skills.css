@@ -1,160 +1,166 @@
-/* ---------- Container ---------- */
+/* ---------- ප්‍රධාන කන්ටේනරය ---------- */
 .Skills {
-  background-color: #0e0e0e;
+  background-color: #0d0d16;
   color: white;
-  padding: 60px 20px;
+  padding: 80px 20px;
   font-family: 'Segoe UI', sans-serif;
   position: relative;
   overflow: hidden;
 }
 
-.skill-title {
-  font-size: 60px;
-  font-weight: bold;
-  color: #C27B8E;
+/* Heading & Underline Styles */
+.heading-wrapper {
+  text-align: center;
   margin-bottom: 50px;
-  animation: fadeInUp 1s ease-out;
-  text-align: center; /* Center align the heading */
 }
 
-.skill-title::after {
-  content: '';
-  width: 100px;
+.skill-title {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  color: #b16a7d; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.underline {
+  width: 60px;
   height: 4px;
-  background: #ff8c00;
-  display: block;
-  margin: 12px 0 0 0; /* Left aligned */
-  border-radius: 4px;
+  background: #b16a7d;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
-/* Optional theme pattern image */
-.about-pattern {
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.06;
-  max-width: 80%;
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* ---------- Skills Layout ---------- */
+/* ---------- Technical Skills Layout ---------- */
 .skills-container {
   display: flex;
-  justify-content: flex-start; /* Left align the container */
-  align-items: flex-start;
-  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
   flex-wrap: wrap;
-  margin-top: 40px;
-  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
-/* Column Styles */
 .skills-column {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 25px 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(255, 140, 0, 0.1);
-  min-width: 280px;
-  flex: 1 1 300px;
-  transition: transform 0.3s ease, background 0.3s ease;
-  backdrop-filter: blur(8px);
-  text-align: left; /* Left align all text */
+  background: #16162a;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  flex: 1 1 320px;
+  transition: all 0.4s ease;
 }
 
 .skills-column:hover {
   transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: #b16a7d;
 }
 
 .skills-column h2 {
   font-size: 22px;
-  color: #ff8c00;
-  margin-bottom: 15px;
+  color: #b16a7d;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(177, 106, 125, 0.2);
+  padding-bottom: 10px;
+}
+
+.tech-skills-grid {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: flex-start; /* Left align headings */
+  flex-direction: column;
+  gap: 15px;
 }
 
-.skills-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Technical Skills වල මාතෘකා (Core Java etc.) */
+.skill-group h4 {
+  color: #ffffff; /* සුදු පාටින් තැබුවා */
+  font-size: 1.1rem;
+  margin-bottom: 3px;
 }
 
-.skills-column ul li {
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: color 0.3s, transform 0.3s;
+.skill-group p {
+  color: #a0a0c0;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
-.skills-column ul li:hover {
-  color: #ff8c00;
-  transform: translateX(5px);
-}
-
-/* ---------- Center Image (now left aligned) ---------- */
+/* Image Styling */
 .image-center {
+  background: transparent;
+  border: none;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start; /* Left align image */
-  animation: fadeIn 1s ease-in-out forwards;
-  opacity: 0;
 }
 
-.image-center img {
-  width: 320px;
-  max-width: 100%;
-  height: auto;
+.image-border img {
+  width: 100%;
+  max-width: 280px;
   border-radius: 20px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
+  border: 4px solid #b16a7d;
+  box-shadow: 0 0 30px rgba(177, 106, 125, 0.3);
 }
 
-/* ---------- Animations ---------- */
+/* ---------- Soft Skills Section (මෙහි වෙනස්කම් කර ඇත) ---------- */
+.soft-skills-container {
+  margin-top: 80px;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.soft-title-wrapper {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.soft-title {
+  color: #b16a7d; /* Soft Skills මාතෘකාව ප්‍රධාන තේමාවට සමාන කළා */
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.soft-skill-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 25px;
+  border-radius: 15px;
+  border-left: 4px solid #b16a7d; /* වම් පස ඉර රෝස පාට */
+  transition: 0.3s ease;
+}
+
+.soft-skill-card:hover {
+  background: rgba(177, 106, 125, 0.08); 
+  transform: translateX(10px);
+}
+
+/* ✅ Soft Skill කාඩ් එක ඇතුළේ ඇති Topic එක පමණක් Orange (#ff8c00) කිරීම */
+.soft-skill-card h4 {
+  color: #ff8c00; 
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.soft-skill-card p {
+  color: #cfcfdf;
+  font-size: 0.9rem;
+}
+
+/* Animations */
 @keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
+.animate-up { animation: fadeInUp 1s ease-out forwards; }
 
-.animate-left { animation: slideInLeft 1s ease forwards; }
-.animate-right { animation: slideInRight 1s ease forwards; }
-.animate-fade { animation: fadeIn 1.2s ease-in-out forwards; }
-
-@keyframes slideInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
-@keyframes slideInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
-
-/* ---------- Responsive ---------- */
-@media (max-width: 992px) {
-  .skills-container {
-    flex-direction: column;
-    align-items: flex-start; /* Keep left aligned on mobile */
-    gap: 30px;
-  }
-
-  .image-center {
-    margin: 20px 0;
-  }
-
-  .skills-column {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .image-center img {
-    width: 280px;
-  }
-}
-
-@media (max-width: 576px) {
-  .skill-title { font-size: 40px; }
-  .skills-column h2 { font-size: 20px; }
-  .skills-column ul li { font-size: 14px; }
-  .image-center img { width: 220px; }
+/* Responsive Setup */
+@media (max-width: 768px) {
+  .skills-container { flex-direction: column; }
+  .image-center { order: -1; margin-bottom: 30px; }
+  .soft-skills-grid { grid-template-columns: 1fr; }
 }
