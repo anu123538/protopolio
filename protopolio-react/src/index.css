@@ -1,10 +1,56 @@
-*{
-  margin:0;
+/* ===== RESET ===== */
+* {
+  margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-body{
-  height: 100vh;
+
+/* ===== BODY ===== */
+body {
   background: #161513;
-  color: #fff;
-  font-family: 'outfit';
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* ===== MAIN CONTENT (IMPORTANT) ===== */
+/* Sticky navbar height compensate */
+.main-content {
+  padding-top: 90px; /* desktop navbar height */
+  min-height: 100vh;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 70px; /* mobile navbar height */
+  }
+}
+
+/* ===== OPTIONAL GLOBAL IMPROVEMENTS ===== */
+
+/* smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* remove default button/input outline */
+button,
+input,
+textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+/* links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* images */
+img {
+  max-width: 100%;
+  display: block;
 }

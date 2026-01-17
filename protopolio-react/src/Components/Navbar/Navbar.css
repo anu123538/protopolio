@@ -1,8 +1,8 @@
 /* ---------- Navbar Base ---------- */
 .navbar {
   display: flex;
-  justify-content: space-between; 
-  align-items: center;            
+  justify-content: space-between;
+  align-items: center;
   padding: 0 30px;
   background-color: #1F1F1F;
   position: sticky;
@@ -11,9 +11,9 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.15);
   height: 90px;
   box-sizing: border-box;
-  flex-wrap: wrap;
 }
 
+/* ---------- Logo ---------- */
 .nav-logo h2 {
   color: #C27B8E;
   margin: 0;
@@ -22,7 +22,7 @@
   white-space: nowrap;
 }
 
-/* ---------- Navbar Menu ---------- */
+/* ---------- Menu ---------- */
 .nav-menu {
   display: flex;
   align-items: center;
@@ -40,13 +40,12 @@
 .nav-menu li a {
   color: #fff;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0 18px;
   font-size: 19px;
   font-weight: 500;
-  height: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
   transition: all 0.3s ease;
   white-space: nowrap;
 }
@@ -67,7 +66,7 @@
   align-items: center;
 }
 
-.nav-connect .connect-btn {
+.connect-btn {
   padding: 12px 28px;
   border-radius: 50px;
   background: #C27B8E;
@@ -77,37 +76,34 @@
   text-decoration: none;
   color: #fff;
   white-space: nowrap;
-  transition: transform 0.3s, background 0.3s;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.nav-connect .connect-btn:hover {
+.connect-btn:hover {
   transform: scale(1.05);
   background: #b16a7d;
 }
 
-/* ---------- Hamburger Menu ---------- */
+/* ---------- Hamburger ---------- */
 .hamburger {
   display: none;
   flex-direction: column;
-  cursor: pointer;
   gap: 5px;
+  cursor: pointer;
 }
 
 .hamburger div {
   width: 25px;
   height: 3px;
   background-color: #fff;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
-/* ---------- Responsive Breakpoints ---------- */
-
-/* Mobile (≤768px) */
+/* ---------- MOBILE (≤768px) ---------- */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 20px;
+    height: 70px;
+    padding: 0 20px;
   }
 
   .hamburger {
@@ -115,52 +111,69 @@
   }
 
   .nav-menu {
-    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
     width: 100%;
-    display: none;  /* hidden by default */
-    margin: 10px 0;
+    background-color: #1F1F1F;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 10px 0;
   }
 
   .nav-menu.show {
-    display: flex;  /* show when hamburger clicked */
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
   }
 
   .nav-menu li a {
     width: 100%;
-    padding: 12px 20px;
-    text-align: center;
+    height: auto;
+    padding: 14px 0;
+    font-size: 18px;
+    justify-content: center;
   }
 
   .nav-connect {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 12px;
     justify-content: center;
   }
 
-  .nav-connect .connect-btn {
-    width: 100%;
+  .connect-btn {
+    width: 90%;
     text-align: center;
   }
 }
 
-/* Tablets (769px - 1023px) */
+/* ---------- TABLET (769px - 1023px) ---------- */
 @media (min-width: 769px) and (max-width: 1023px) {
   .nav-menu {
     gap: 15px;
   }
+
+  .nav-menu li a {
+    font-size: 18px;
+  }
+
+  .connect-btn {
+    font-size: 18px;
+  }
 }
 
-/* Desktops (≥1024px) */
+/* ---------- DESKTOP (≥1024px) ---------- */
 @media (min-width: 1024px) {
   .navbar {
-    flex-direction: row;
     padding: 0 50px;
     height: 90px;
   }
 
   .nav-menu {
     gap: 25px;
-    flex-direction: row;
     display: flex !important;
   }
 
@@ -168,8 +181,7 @@
     font-size: 20px;
   }
 
-  .nav-connect .connect-btn {
-    padding: 12px 28px;
+  .connect-btn {
     font-size: 20px;
   }
 

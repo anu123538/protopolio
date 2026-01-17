@@ -1,14 +1,15 @@
-/* mobile-first baseline */
+/* ===== MOBILE FIRST ===== */
 .hero {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
-  padding: 40px 20px;
+  padding: 40px 16px;
   box-sizing: border-box;
+  text-align: center;
 }
 
-/* profile image */
+/* Profile Image */
 .hero img {
   width: 140px;
   height: 140px;
@@ -16,191 +17,135 @@
   object-fit: cover;
   border: 3px solid white;
   animation: float 3s ease-in-out infinite;
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 /* Floating animation */
 @keyframes float {
-  0% { transform: translateY(0px); }
+  0% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  100% { transform: translateY(0); }
 }
 
-/* headline */
+/* Headline */
 .hero h1 {
-  font-size: 28px;
-  width: 100%;
+  font-size: clamp(26px, 6vw, 60px);
   font-weight: 600;
-  text-align: center;
+  line-height: 1.1;
   margin: 0;
-  line-height: 1.05;
+  max-width: 900px;
 }
 
-/* gradient text */
+/* Gradient text */
 .hero h1 span {
-  background: linear-gradient(270deg, #C27B8E 10%, #C27B8E 100%);
+  background: linear-gradient(270deg, #C27B8E, #C27B8E);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* typing animation container */
+/* Typing animation */
 .typing-animation {
   display: inline-block;
+  max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
   border-right: 3px solid #C27B8E;
   animation: typing 3s steps(30, end), blink 0.7s step-end infinite;
-  vertical-align: middle;
 }
 
-/* typing keyframes based on container width */
+/* Typing keyframes */
 @keyframes typing {
   from { width: 0; }
-  to   { width: 100%; }
+  to { width: 100%; }
 }
+
 @keyframes blink {
   50% { border-color: transparent; }
 }
 
-/* description paragraph */
+/* Description */
 .hero p {
-  font-size: 16px;
-  width: 100%;
-  text-align: center;
-  line-height: 1.5;
-  margin: 0;
+  font-size: clamp(15px, 4vw, 22px);
+  line-height: 1.6;
   max-width: 720px;
+  margin: 0;
 }
 
-/* action buttons row */
+/* Action Buttons */
 .hero-action {
   display: flex;
   gap: 16px;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 20px;
-  margin-bottom: 20px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 24px;
 }
 
-/* Connect Button */
-.hero-connect {
-  padding: 12px 22px;
-  border-radius: 30px;
-  background: linear-gradient(264deg, #C27B8E -5.09%, #C27B8E 100%);
-  cursor: pointer;
-  transition: transform .25s ease, border-color .25s ease;
-  color: black;
-  border: none;
-}
-
-/* Resume Button */
+/* Buttons */
+.hero-connect,
 .hero-resume {
-  padding: 12px 22px;
-  border-radius: 30px;
-  border: 2px solid #FFF;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: clamp(14px, 3.5vw, 20px);
   cursor: pointer;
   transition: transform .25s ease, border-color .25s ease;
-  text-decoration: none;
-  color: white;
+}
+
+/* Connect */
+.hero-connect {
+  background: linear-gradient(264deg, #C27B8E, #C27B8E);
+  border: none;
+  color: black;
+}
+
+/* Resume */
+.hero-resume {
   background: transparent;
-}
-
-/* Hover Effects */
-.hero-connect:hover {
   border: 2px solid white;
-  transform: scale(1.03);
+  color: white;
+  text-decoration: none;
 }
 
+/* Hover */
+.hero-connect:hover,
 .hero-resume:hover {
-  border-color: #B415FF;
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-/* Medium screens (tablet) */
+/* ===== TABLET ===== */
 @media (min-width: 640px) {
   .hero {
-    gap: 28px;
     padding: 60px 32px;
+    gap: 28px;
   }
 
   .hero img {
     width: 180px;
     height: 180px;
-    margin-top: 40px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-    width: 80%;
-  }
-
-  .hero p {
-    font-size: 18px;
-    width: 80%;
-    line-height: 1.6;
-  }
-
-  .hero-action {
-    gap: 20px;
-    font-size: 18px;
-  }
-
-  .hero-connect, .hero-resume {
-    padding: 14px 28px;
-    border-radius: 36px;
   }
 }
 
-/* Large screens (desktop) */
+/* ===== DESKTOP ===== */
 @media (min-width: 1024px) {
   .hero {
-    gap: 35px;
     padding: 80px 60px;
-    flex-direction: column;
+    gap: 36px;
   }
 
   .hero img {
-    width: 200px;
-    height: 200px;
-    margin-top: 50px;
-  }
-
-  .hero h1 {
-    font-size: 60px;
-    width: 60%;
-    text-align: center;
-  }
-
-  .typing-animation {
-    /* When the container is large let typing reach full width */
-    max-width: 100%;
+    width: 220px;
+    height: 220px;
   }
 
   .hero p {
-    font-size: 24px;
-    width: 50%;
-    line-height: 40px;
-  }
-
-  .hero-action {
-    gap: 25px;
-    font-size: 24px;
-    margin-bottom: 50px;
-  }
-
-  .hero-connect, .hero-resume {
-    padding: 20px 40px;
-    border-radius: 40px;
+    max-width: 900px;
   }
 }
 
-/* Optional: reduce motion for users who prefer reduced motion */
+/* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
-  .hero img, .typing-animation {
+  .hero img,
+  .typing-animation {
     animation: none;
   }
 }
